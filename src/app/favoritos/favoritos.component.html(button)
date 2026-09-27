@@ -2,3 +2,25 @@
     text="★"
     (tap)="agregarFavorito(articulo)">
 </Button>
+<ListView [items]="favoritos">
+
+    <ng-template let-articulo="item">
+
+        <GridLayout columns="*, auto">
+
+            <Label
+                [text]="articulo.titulo"
+                col="0">
+            </Label>
+
+            <Button
+                text="Leer ahora"
+                col="1"
+                (tap)="leerAhora(articulo)">
+            </Button>
+
+        </GridLayout>
+
+    </ng-template>
+
+</ListView>
