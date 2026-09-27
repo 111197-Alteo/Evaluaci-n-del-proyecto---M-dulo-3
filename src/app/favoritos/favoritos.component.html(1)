@@ -1,0 +1,4 @@
+<Button
+    text="★"
+    (tap)="agregarFavorito(articulo)">
+</Button>
