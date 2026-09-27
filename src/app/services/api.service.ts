@@ -8,18 +8,3 @@ export class SettingsService {
             ''
         );
     }
-
-    guardarUsuario(nombre: string): void {
-        ApplicationSettings.setString(
-            'usuario',
-            nombre
-        );
-    }
-}
-ngOnInit() {
-    this.usuario = this.settingsService.obtenerUsuario();
-}
-
-guardar() {
-    this.settingsService.guardarUsuario(this.usuario);
-}
