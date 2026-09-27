@@ -1,0 +1,14 @@
+<Label text="Leídos recientemente"></Label>
+
+<ListView [items]="leidos">
+
+    <ng-template let-articulo="item">
+
+        <Label
+            [text]="articulo.titulo"
+            padding="10">
+        </Label>
+
+    </ng-template>
+
+</ListView>
