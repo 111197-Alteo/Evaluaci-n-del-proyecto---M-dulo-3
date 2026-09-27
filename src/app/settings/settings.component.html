@@ -1,0 +1,32 @@
+<TextField
+    hint="Buscar..."
+    [(ngModel)]="textoBusqueda">
+</TextField>
+
+<Button
+    text="Buscar"
+    (tap)="buscar()">
+</Button>
+
+<ListView [items]="articulos">
+
+    <ng-template let-articulo="item">
+
+        <GridLayout columns="*, auto" padding="10">
+
+            <Label
+                [text]="articulo.titulo"
+                col="0">
+            </Label>
+
+            <Button
+                text="★"
+                col="1"
+                (tap)="agregarFavorito(articulo)">
+            </Button>
+
+        </GridLayout>
+
+    </ng-template>
+
+</ListView>
